@@ -5,13 +5,17 @@
   border: 1px solid;
   margin: 0 auto;
   border: 6px solid #4287f5;
+
+  &:hover {
+    background-color: green;
+  }
 }
 
 .container {
-  display: grid;
-  height: 100vh;
+  display: flex;
+  height: 90vh;
   margin: auto;
-  place-items: center;
+  align-items: center;
 }
 
 .navbar {
