@@ -9,19 +9,26 @@ const successMessage = message => {
   // Clear out our forms
   $('form').trigger('reset')
 }
+
 const signUpSuccessful = responseData => {
   successMessage('You signed up successfully!')
 }
 const signInSuccessful = responseData => {
   console.log('responseData is', responseData)
   successMessage('You signed in successfully')
-
   // keeping track of the user, so we can have the token for the API
   // we use `store` so we can access the token in any file
   store.user = responseData.user
 }
+const signOutSuccessful = responseData => {
+  console.log('responseData is', responseData)
+  successMessage('You signed out successfully!')
+}
+
+
 module.exports = {
   signUpSuccessful,
-  signInSuccessful
+  signInSuccessful,
+  signOutSuccessful
 
 }
