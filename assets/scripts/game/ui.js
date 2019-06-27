@@ -9,7 +9,7 @@ const successMessage = message => {
   // Clear out our forms
   $('form').trigger('reset')
 }
-const failureMessage = => {
+const failureMessage = message => {
   $('#message').text(message)
   $('#message').removeClass('failure')
 
@@ -28,10 +28,10 @@ const createGameSuccessful = responseData => {
 }
 const createGameFailure = () => {
   failureMessage('You failed to create game!')
-
 }
 
 module.exports = {
+  createGame,
   createGameSuccessful,
   createGameFailure
 }
