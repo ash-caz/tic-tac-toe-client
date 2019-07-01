@@ -17,11 +17,7 @@ const onCreateGame = event => {
 }
 
 const onUpdateGame = event => {
-  // conditional to stop switching players when box is clicked
-  const checkWinner = {
-  if (dataCellIndex = [0]
 
-}
   if ($(event.target).text()) {
     console.log('invalid move!')
   } else {
@@ -34,7 +30,6 @@ const onUpdateGame = event => {
     }
   }
 }
-
 module.exports = {
   onCreateGame,
   onUpdateGame,

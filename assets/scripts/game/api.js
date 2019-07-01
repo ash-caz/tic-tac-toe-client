@@ -57,6 +57,8 @@ const updateGame = cellIndexData => {
   })
 }
 
+// to update move use patch.
+
 module.exports = {
   signUp,
   signIn,

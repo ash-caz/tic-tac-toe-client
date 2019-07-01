@@ -19,6 +19,11 @@ const signInSuccessful = responseData => {
   // keeping track of the user, so we can have the token for the API
   // we use `store` so we can access the token in any file
   store.user = responseData.user
+  $('#sign-out').removeClass('hide')
+  $('#change-password').removeClass('hide')
+  $('.gameboard').removeClass('hide')
+  $('#sign-in').addClass('hide')
+  $('#sign-up').addClass('hide')
 }
 const signOutSuccessful = responseData => {
   console.log('responseData is', responseData)
