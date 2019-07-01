@@ -7,6 +7,8 @@
 const api = require('./api')
 const ui = require('./ui')
 
+let player = 'x'
+
 const onCreateGame = event => {
   event.preventDefault()
   api.createGame()
@@ -15,10 +17,27 @@ const onCreateGame = event => {
 }
 
 const onUpdateGame = event => {
-$(event.target).html('x')
+  // conditional to stop switching players when box is clicked
+  const checkWinner = {
+  if (dataCellIndex = [0]
+
+}
+  if ($(event.target).text()) {
+    console.log('invalid move!')
+  } else {
+    // check for win
+    $(event.target).html(player)
+    if (player === 'x') {
+      player = 'o'
+    } else if (player === 'o') {
+      player = 'x'
+    }
+  }
 }
 
 module.exports = {
   onCreateGame,
-  onUpdateGame
+  onUpdateGame,
+  player
+
 }
