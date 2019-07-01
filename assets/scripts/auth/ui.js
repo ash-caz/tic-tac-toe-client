@@ -24,8 +24,6 @@ const signOutSuccessful = responseData => {
   console.log('responseData is', responseData)
   successMessage('You signed out successfully!')
 }
-
-
 module.exports = {
   signUpSuccessful,
   signInSuccessful,

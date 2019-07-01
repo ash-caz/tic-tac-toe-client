@@ -1,25 +1,24 @@
 'use strict'
 
+// require store in events file .
+// set up way to keep track of who player is.
+// const store = require('./store')
 
-
-
- const api = require('./api')
+const api = require('./api')
 const ui = require('./ui')
 
- const onCreateGame = event => {
- console.log(marked)
- event.preventDefault()
+const onCreateGame = event => {
+  event.preventDefault()
+  api.createGame()
+    .then(ui.createGameSuccessful)
+    .catch(ui.createGameFailure)
+}
 
-const data-cell-index = event.target
- api.createGame(data-cell-index-data)
-  .then(ui.createGameSuccessful)
-.catch(ui.createGameError)
- }
-
-
-
+const onUpdateGame = event => {
+$(event.target).html('x')
+}
 
 module.exports = {
-  onCreateGame
-
+  onCreateGame,
+  onUpdateGame
 }
