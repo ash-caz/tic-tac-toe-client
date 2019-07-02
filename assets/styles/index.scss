@@ -1,13 +1,27 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background-color: #5442f5;
+}
+
+h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+
+}
+.gameboard {
+justify-content: center;
+align-items: center;
+}
 .cell {
   height: 8rem;
   border: 1px solid;
   margin: 0 auto;
-  border: 6px solid #4287f5;
+  border: 6px solid #ffff;
 
   &:hover {
-    background-color: green;
+    background-color: pink;
   }
 }
 
@@ -24,12 +38,27 @@
   background-color: #D3D3D3;
 }
 
+#create-game {
+  position: relative;
+  border: none;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #b23681;
+  border: none;
+  border-radius: 15px;
+}
+
 #sign-up {
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 #sign-in {
@@ -39,9 +68,7 @@
   justify-content: center;
   align-items: center;
 }
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 20px;
+
+.hide {
+  display: none;
 }
