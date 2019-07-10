@@ -1,3 +1,6 @@
+<h1>About<h1>
+
+
 Name of Game Built: Tic~Tac~Toe
 
 Built With:
