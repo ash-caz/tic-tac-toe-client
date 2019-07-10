@@ -12,10 +12,12 @@ const successMessage = message => {
 
 const signUpSuccessful = responseData => {
   successMessage('You signed up successfully!')
+  $('form').trigger('reset')
 }
 const signInSuccessful = responseData => {
   console.log('responseData is', responseData)
   successMessage('You signed in successfully')
+  $('form').trigger('reset')
   // keeping track of the user, so we can have the token for the API
   // we use `store` so we can access the token in any file
   store.user = responseData.user
@@ -28,10 +30,18 @@ const signInSuccessful = responseData => {
 const signOutSuccessful = responseData => {
   console.log('responseData is', responseData)
   successMessage('You signed out successfully!')
+  $('form').trigger('reset')
+}
+
+const changePasswordSuccessful = responseData => {
+  console.log('responseData is', responseData)
+  successMessage('You Changed Your Password!')
+  $('form').trigger('reset')
 }
 module.exports = {
   signUpSuccessful,
   signInSuccessful,
-  signOutSuccessful
+  signOutSuccessful,
+  changePasswordSuccessful
 
 }
