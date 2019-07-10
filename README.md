@@ -1,13 +1,7 @@
-<h1>About<h1>
+<h1>About</h1>
 
+Game: Tic~Tac~Toe
 
-Name of Game Built: Tic~Tac~Toe
-
-Built With:
-HTML
-CSS
-Javascript
-Jquery
 
 
 Author:
@@ -16,3 +10,9 @@ Ashley Caswell
 LICENSE: project has no licenses added yet. Plan to add MIT license.
 
 Hats off to instructors and classmates at GA who helped guide me!
+
+<ul>Technologies:</ul>
+HTML
+CSS
+Javascript
+Jquery
