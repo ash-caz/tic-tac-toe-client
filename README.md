@@ -11,7 +11,7 @@ LICENSE: project has no licenses added yet. Plan to add MIT license.
 
 Hats off to instructors and classmates at GA who helped guide me!
 
-<ul>Technologies:</ul>
+<h1>Technologies:</h1>
 HTML
 CSS
 Javascript
