@@ -19,24 +19,24 @@
   <nav>
     <div id="message"></div>
     <ul class="navbar">
-        <button id="create-game">Create Game</button>
-      <form id="sign-up">
+        <button id="create-game" class="after-signin">Create Game</button>
+      <form id="sign-up" class="before-signin">
         <input type="email" name="credentials[email]" placeholder="Email">
         <input type="password" name="credentials[password]" placeholder="Password">
         <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
         <button>Sign Up!</button>
       </form>
-      <form id="sign-in">
+      <form id="sign-in" class="before-signin">
         <input type="email" name="credentials[email]" placeholder="Email">
         <input type="password" name="credentials[password]" placeholder="Password">
         <button>Sign In!</button>
       </form>
-      <form id="change-password" class="hide">
+      <form id="change-password" class="after-signin">
         <input type="password" name="passwords[old]" placeholder="Old Password">
         <input type="password" name="passwords[new]" placeholder="New Password">
         <button>Change Password!</button>
       </form>
-      <form id="sign-out" class="hide">
+      <form id="sign-out" class="after-signin">
         <button>Sign out!</button>
       </form>
 
@@ -45,7 +45,7 @@
 
 <h1>Tic~Tac~Toe!</h1>
 
-    <div class="gameboard hide">
+    <div class="gameboard after-signin">
         <div class="container">
     <div class="row">
       <div class="col-4 cell" data-cell-index='0'></div>
