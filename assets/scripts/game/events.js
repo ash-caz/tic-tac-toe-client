@@ -14,12 +14,13 @@ const onCreateGame = event => {
   api.createGame()
     .then(ui.createGameSuccessful)
     .catch(ui.createGameFailure)
+  onUpdateGame(event)
 }
 
 const onUpdateGame = event => {
 
   if ($(event.target).text()) {
-    console.log('invalid move!')
+    // console.log('invalid move!')
   } else {
     // check for win
     $(event.target).html(player)

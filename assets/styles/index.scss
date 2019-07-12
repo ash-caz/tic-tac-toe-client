@@ -70,6 +70,9 @@ align-items: center;
   align-items: center;
 }
 
-.after-signin {
+.after-signin, .after-signingb {
   display: none;
+}
+.show {
+ visibility: visible;
 }

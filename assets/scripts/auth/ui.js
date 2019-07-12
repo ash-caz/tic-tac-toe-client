@@ -15,7 +15,7 @@ const signUpSuccessful = responseData => {
   $('form').trigger('reset')
 }
 const signInSuccessful = responseData => {
-  console.log('responseData is', responseData)
+  // console.log('responseData is', responseData)
   successMessage('You signed in successfully')
   $('form').trigger('reset')
   // keeping track of the user, so we can have the token for the API
@@ -25,7 +25,7 @@ const signInSuccessful = responseData => {
   $('.after-signin').show()
 }
 const signOutSuccessful = responseData => {
-  console.log('responseData is', responseData)
+  // console.log('responseData is', responseData)
   successMessage('You signed out successfully!')
   $('form').trigger('reset')
   $('.after-signin').hide()
@@ -33,7 +33,7 @@ const signOutSuccessful = responseData => {
 }
 
 const changePasswordSuccessful = responseData => {
-  console.log('responseData is', responseData)
+  // console.log('responseData is', responseData)
   successMessage('You Changed Your Password!')
   $('form').trigger('reset')
 }

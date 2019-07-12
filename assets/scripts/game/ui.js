@@ -20,16 +20,20 @@ const failureMessage = message => {
 const createGameSuccessful = responseData => {
   successMessage('You created a new game!')
   store.gameData = responseData.game
-  console.log(store.gameData)
+  $('.gameboard').removeClass('after-signingb')
+  $('.gameboard').addClass('show')
+
+  // console.log(store.gameData)
 }
 
 const createGameFailure = () => {
   failureMessage('You failed to create game!')
+  store.gameData = responseData.game
 }
 // const updateGameSuccessful = responseData =>
 //   successMessage('You updated your game!')
 // store.gameData = responseData.game
-// console.log(store.gameData)
+// // console.log(store.gameData)
 
 module.exports = {
   createGameSuccessful,
