@@ -13,27 +13,19 @@ const successMessage = message => {
 const failureMessage = message => {
   $('#message').text(message)
   $('#message').removeClass('failure')
-
   $('form').trigger('reset')
 }
 
 const createGameSuccessful = responseData => {
   successMessage('You created a new game!')
-  store.gameData = responseData.game
-  $('.gameboard').removeClass('after-signingb')
+  store.game = responseData.game
+  $('.gameboard').removeClass('after-signingin')
   $('.gameboard').addClass('show')
-
-  // console.log(store.gameData)
 }
 
 const createGameFailure = () => {
-  failureMessage('You failed to create game!')
-  store.gameData = responseData.game
+failureMessage('Failure to create new game!')
 }
-// const updateGameSuccessful = responseData =>
-//   successMessage('You updated your game!')
-// store.gameData = responseData.game
-// // console.log(store.gameData)
 
 module.exports = {
   createGameSuccessful,

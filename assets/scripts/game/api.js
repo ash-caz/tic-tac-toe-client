@@ -1,6 +1,5 @@
 'use strict'
 
-
 const config = require('../config')
 const store = require('../store')
 
@@ -20,15 +19,14 @@ const signIn = formData => {
   })
 }
 const gameCellIndex = () => {
-return $.ajax({
-    url: config.api.url + '/games',
+  return $.ajax({
+    url: config.apiUrl + '/games',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
-
 
 const createGame = () => {
   return $.ajax({
@@ -57,12 +55,31 @@ const updateGame = cellIndexData => {
   })
 }
 
-// to update move use patch.
+const makeYourMove = cellIndexData => {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.gameData.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+const myPastGames = cellIndexData => {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.gameData.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   createGame,
   updateGame,
-  gameCellIndex
+  gameCellIndex,
+  makeYourMove,
+  myPastGames
 }
